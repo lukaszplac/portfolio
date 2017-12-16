@@ -1,11 +1,14 @@
 .navi
-	ul {
+	>ul {
+		padding: 0;
+		margin: 0;
 		list-style-type: none;
 		text-align: center;
-	}
+		}
 		li {
 			display: inline;
-			padding: 0 10px;
+			padding: 10px;
+			margin: 0;
 		}
 .link {
 	color: black;
@@ -13,4 +16,5 @@
 	}
 	:hover, :focus{
 		color: blue;
-	}
+		}
+
