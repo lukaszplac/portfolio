@@ -1,11 +1,19 @@
 import React from 'react';
 import styles from "./Portfolio.scss"
 
-const Portfolio = props => (
-	<div className={styles.portfolio}>
-		portfolio
-	</div>
-);
+class Portfolio extends React.Component {
+	constructor(props){
+		super(props);
+	}
+	render() {
+	return(
+		<div className={styles.portfolio}>
+			<p>portfolio</p>
+		</div>
+		
+		)
+	}
+}
 
 export default Portfolio;
 

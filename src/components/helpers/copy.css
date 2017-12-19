@@ -34,7 +34,7 @@
     transition: all 0.2s linear 0.4s;
 }
 .SlideIn-leave {
-    opacity: 1.0;
+    opacity: 1;
     transform: translateX(0);
     -webkit-transform: translateX(0);
     -moz-transform: translateX(0);
@@ -50,14 +50,10 @@
     -moz-transform: translateX(-30px);
     -o-transform: translateX(-30px);
     -ms-transform: translateX(-30px);
-    transition: all 0.2s linear;
+    transition: all 2s linear;
 }
 
-
-
-
-
-
+/*##############*/
 
 .SlideOut-appear {
   transform: translateX(-30px);
@@ -75,7 +71,7 @@
   -moz-transform: translateX(0);
   -o-transform: translateX(0);
   -ms-transform: translateX(0);
-  transition: all 0.6s linear;
+  transition: all .6s linear;
 }
 .SlideOut-enter {
     opacity: 0;
@@ -92,7 +88,7 @@
     -moz-transform: translateX(0);
     -o-transform: translateX(0);
     -ms-transform: translateX(0);
-    transition: all 0.2s linear 0.4s;
+    transition: all .2s linear 0.4s;
 }
 .SlideOut-leave {
     opacity: 1.0;
@@ -111,5 +107,5 @@
     -moz-transform: translateX(30px);
     -o-transform: translateX(30px);
     -ms-transform: translateX(30px);
-    transition: all 0.2s linear;
+    transition: all .2s linear;
 }

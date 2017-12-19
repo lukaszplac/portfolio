@@ -1,17 +1,14 @@
 .start {
-	text-align: center;
-	}
-	// * {
-	// border: 1px solid red;
-	// }	 
+	text-align: center;	 
 	>h1 {
 	color: cyan;
 	}
 	>.image {
 		border : none;
-		}
 		img {
 			border: none;
 			max-width: 100%;
     		height: auto;
 		}
+	}
+}

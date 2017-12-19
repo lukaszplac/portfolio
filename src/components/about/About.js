@@ -1,10 +1,17 @@
 import React from 'react';
 import styles from "./About.scss"
 
-const About = props => (
-	<div className={styles.about}>
-		about
-	</div>
-);
+class About extends React.Component {
+	constructor(props){
+		super(props);
+	}
+	render() {
+		return(
+		<div className={styles.about}>
+			<p>about</p>
+		</div>
+		)
+	}
+}
 
 export default About;

@@ -1,10 +1,20 @@
 import React from 'react';
 import styles from "./Contact.scss"
 
-export const Contact = props => (
-	<div className={styles.contact}>
-		contact
-	</div>
-);
+class Contact extends React.Component {
+	constructor(props){
+		super(props);
+	}
 
-export default Contact
+	render() {
+		return(
+		<div className={styles.container}>
+			<div className={styles.contact}>
+				<p>contact</p>
+			</div>
+		</div>
+		)
+	}
+}
+
+export default Contact;
