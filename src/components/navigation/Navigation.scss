@@ -8,8 +8,6 @@ $hover-color: #80ccff;
 	background-color: black;
 	color: white;
 	padding: 10px 0;
-	display: flex;
-    display: -webkit-flex;
     @include flexbox();
     @include flex-direction(row);
     @include align-items(center);

@@ -6,19 +6,17 @@ import About from './about/About';
 import Portfolio from './portfolio/Portfolio';
 import Contact from './contact/Contact';
 import styles from './App.scss';
-import './helpers/PageWrapper.css'
-import PageWrapper from './helpers/PageWrapper';
 
 class App extends Component {
 	
 	render() {
 		return (
 				<div>
-						<Navigation />
-						<Route location={location} key={'1'} path="/" exact component={PageWrapper(Start)}/>
-						<Route location={location} key={'2'} path="/portfolio" exact component={PageWrapper(Portfolio)}/>
-						<Route location={location} key={'3'} path="/about" exact component={PageWrapper(About)}/>
-						<Route location={location} key={'4'} path="/contact" exact component={PageWrapper(Contact)}/>
+					<Navigation />
+					<Route key={'1'} path="/" exact component={Start}/>
+					<Route key={'2'} path="/portfolio" exact component={Portfolio}/>
+					<Route key={'3'} path="/about" exact component={About}/>
+					<Route key={'4'} path="/contact" exact component={Contact}/>
 				</div>
 			)
 	}

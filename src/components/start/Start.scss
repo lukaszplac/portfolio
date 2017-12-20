@@ -1,10 +1,24 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import '../helpers/flex-mixin.scss';
+$font-primary-style: Open Sans, sans-serif;
+$hover-color: #80ccff;
+
 .start {
+	font-family: $font-primary-style;
+	color: black;
+	padding: 10px 10px;
+    @include flexbox();
+    @include flex-direction(row);
+    @include align-items(center);
+    @include align-content(row);
+    @include justify-content(space-around);
+    @include flex-wrap(nowrap);
 	text-align: center;	 
-	>h1 {
-	color: cyan;
+	div.info {
+		@include flex(30%);
 	}
-	>.image {
-		border : none;
+	div.image {
+		@include flex(30%);
 		img {
 			border: none;
 			max-width: 100%;

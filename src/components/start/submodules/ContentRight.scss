@@ -1,0 +1,33 @@
+@mixin paddingMix($left, $botTop) {
+	padding-left: $left;
+	padding-top: $botTop;
+	padding-bottom: $botTop;
+}
+
+div.content0 {
+	@include paddingMix(15px, 20px);
+	text-align: left;
+}
+
+div.content1 {
+	@include paddingMix(70px, 20px);
+	text-align: left;
+}
+
+div.content2 {
+	@include paddingMix(70px, 20px);
+	text-align: left;
+}
+
+div.content3 {
+	@include paddingMix(15px, 20px);
+	text-align: left;
+}
+
+.hidden {
+	visibility: hidden;
+}
+
+.notHidden {
+	visibility: visible;
+}
