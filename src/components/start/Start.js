@@ -6,9 +6,12 @@ import ContentRight from './submodules/ContentRight';
 import contentJson from './content.json';
  
 class Start extends React.Component {
+
 	constructor(props) {
 		super(props);
+
 	}
+
 	render() {
 		let contentArrayLeft = Object.values(contentJson.contentLeft);
 		let contentArrayRight = Object.values(contentJson.contentRight);

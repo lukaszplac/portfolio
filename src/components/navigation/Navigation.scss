@@ -20,6 +20,13 @@ $hover-color: #80ccff;
 
     div.logo {
     	@include flex(15%);
+        >h2>a {
+            color: white;
+            text-decoration: none;
+            &:hover {
+                color: $hover-color; 
+            }
+        }
     }
     div.links {
     	@include flex(40%);
@@ -36,6 +43,7 @@ $hover-color: #80ccff;
 	    	}
 	    }
     }
+
     div.contacts {
     	@include flex(15%);
     	text-align: center;	
@@ -44,7 +52,6 @@ $hover-color: #80ccff;
     		padding: 0 5px;
     		&:hover {
     			color: $hover-color;
-    			cursor: pointer;
     		}
     	}
     }

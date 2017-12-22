@@ -12,7 +12,7 @@ class Navigation extends React.Component {
 		<div className={'animated fadeInDown'}>
 			<div className={styles.navi}>
 				<div className={styles.logo}>
-					<h2>{"<code/>"}</h2>
+					<h2><Link className={styles.link} to={'/'}>{"<code/>"}</Link></h2>
 				</div>
 				<div className={styles.links}>
 					<ul>

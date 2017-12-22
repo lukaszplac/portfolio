@@ -1,0 +1,51 @@
+@import '../../helpers/animation.scss';
+
+@include keyframes(animFirst) {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@include keyframes(animSecond) {
+  0% { 
+  		display: block;
+  		opacity: 0;
+  		}
+  1% { 
+  		opacity: 0; 
+  		}
+  100% { 
+  		opacity: 1; 
+  		}
+}
+
+
+.images {
+  text-align: center;
+	img {
+		  max-width: 450px;
+    	height: auto;
+    	&:first-child {
+    		@include animation('animFirst 0.8s linear');
+    	}
+    	&:last-child {
+    		display: none;
+    		opacity: 0;
+    	}
+	}
+
+}
+
+.unhide {
+  text-align: center;
+	img {
+		  max-width: 450px;
+    	height: auto;
+    	&:first-child {
+    		display: none;
+    	}
+    	&:last-child {
+    		@include animation('animSecond 0.5s ease-out 0.1s');
+
+    	}
+	}
+}
