@@ -1,0 +1,43 @@
+{
+	"contentLeft": [{
+			"wait": 400,
+			"title": "Layout templates",
+			"apps": [{
+							"title": "app1",
+				      "description": "some app1",
+				      "webLink": "some\\web\\link1",
+							"sourceLink": "some\\sourece\\link1"
+							},
+							 {
+							"title": "app2",
+							"description": "some app2",
+							"webLink": "some\\web\\link2",
+							"sourceLink": "some\\sourece\\link2"
+							},
+							 {
+							"title": "app3",
+							"description": "some app3",
+							"webLink": "some\\web\\link3",
+							"sourceLink": "some\\sourece\\link3"
+							}
+							]
+		},
+		{
+			"wait": 800,
+			"title": "Web applications",
+			"apps": [{
+							"title": "app1",
+							"description": "some app1",
+							"webLink": "some\\web\\link1",
+							"sourceLink": "some\\sourece\\link1"
+							},
+							 {
+							"title": "app2",
+							"description": "some app2",
+							"webLink": "some\\web\\link2",
+							"sourceLink": "some\\sourece\\link2"
+							}
+							]
+			}
+	]
+}

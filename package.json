@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "set NODE_ENV=production&&webpack",
-    "start": "webpack-dev-server --inline --hot --config ./webpack.config.js"
+    "start": "webpack-dev-server --watch-poll --inline --hot --config ./webpack.config.js"
   },
   "repository": {
     "type": "git",

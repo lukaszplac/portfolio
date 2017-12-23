@@ -5,14 +5,14 @@ import PanelLeft from './submodules/PanelLeft';
 import contentJson from './content.json';
 
 class About extends React.Component {
-	
+
 	constructor(props){
 		super(props);
 	}
 
 	render() {
 		let contentArrayLeft = Object.values(contentJson.contentLeft);
-		let contentParsedToDomElementsLeft = contentArrayLeft.map((item, i) => 
+		let contentParsedToDomElementsLeft = contentArrayLeft.map((item, i) =>
 					(<PanelLeft key={i} number={i} {...item} anim="zoomIn"/>)
 			);
 		return(

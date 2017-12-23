@@ -1,0 +1,12 @@
+@import '../../helpers/flex-mixin.scss';
+$font-primary-style: Open Sans, sans-serif;
+$hover-color: #80ccff;
+
+.hidden {
+	visibility: hidden;
+}
+
+.notHidden {
+	visibility: visible;
+	@include flex(0 0 20%);
+}

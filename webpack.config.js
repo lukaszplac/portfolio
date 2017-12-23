@@ -31,22 +31,22 @@ module.exports = {
 	},
 	module: {
 		rules: [
-		{ 
-		  	test: /\.js$/, 
-		  	loader: 'babel-loader', 
-		  	exclude: /node_modules/ 
+		{
+		  	test: /\.js$/,
+		  	loader: 'babel-loader',
+		  	exclude: /node_modules/
 		},
 		{
 			test: /\.(scss)$/,
       use: [{
               loader: "style-loader" // creates style nodes from JS strings
-            	}, 
+            	},
             	{
               loader: "css-loader", // translates CSS into CommonJS
             	    options: {
                   modules: true
                 }
-            	}, 
+            	},
             	{
               loader: "sass-loader" // compiles Sass to CSS
             	}]
@@ -55,7 +55,7 @@ module.exports = {
       test: /\.(css)$/,
       use: [{
               loader: "style-loader" // creates style nodes from JS strings
-              }, 
+              },
               {
               loader: "css-loader", // translates CSS into CommonJS
                   options: {
@@ -68,7 +68,7 @@ module.exports = {
         use: [
           {
             loader: 'file-loader',
-            options: {}  
+            options: {}
           }
         ]
     }

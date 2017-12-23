@@ -1,0 +1,10 @@
+@import '../../helpers/flex-mixin.scss';
+
+.hidden {
+	visibility: hidden;
+}
+
+.notHidden {
+	visibility: visible;
+	border-bottom: 2px solid black;
+}
