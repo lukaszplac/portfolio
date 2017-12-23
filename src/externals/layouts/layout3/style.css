@@ -1,0 +1,51 @@
+
+body {
+	color: white;
+	background-color: white;
+}
+
+div.jumbotron {
+ 	height: 100%;
+ 	position: relative;
+ 	background-color: rgba(0, 0, 0, 0.7); 
+}
+
+div.jumbotron:after {
+	background-image: url('img/bg.jpg');
+ 	content : "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.my-image-container>.my-project-text {
+	display: none;
+}
+
+.my-image-container:hover img{
+	opacity: 0.2;
+	transform: scale(1.2);
+	overflow: hidden;
+	transition: 1s;
+    position: relative;
+}
+
+.my-image-container:hover>.my-project-text {
+	display: block;
+	color: white;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%); 
+}
+
+.my-image-container>.my-project-text>a:hover {
+	color: blue;
+}
+
+.my-col {
+	height: inherit;
+}

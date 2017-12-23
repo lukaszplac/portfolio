@@ -3,22 +3,28 @@
 			"wait": 400,
 			"title": "Layout templates",
 			"apps": [{
-							"title": "app1",
-				      "description": "some app1",
-				      "webLink": "some\\web\\link1",
-							"sourceLink": "some\\sourece\\link1"
+							"title": "Layout example #1",
+				      "description": "Example of my layout cutting abilities. This page was made using only HTML/CSS and suport css library animated.css",
+				      "webLink": "https://lukaszplac.github.io/Project3_3/",
+							"sourceLink": "https://github.com/lukaszplac/Project3_3"
 							},
 							 {
-							"title": "app2",
-							"description": "some app2",
-							"webLink": "some\\web\\link2",
-							"sourceLink": "some\\sourece\\link2"
+							"title": "Layout example #2",
+				      "description": "Another example of my layout cutting abilities. This page was made using mostly Bootstrap custom classes and HTML",
+				      "webLink": "https://lukaszplac.github.io/Project3_4/",
+							"sourceLink": "https://github.com/lukaszplac/Project3_4"
 							},
 							 {
-							"title": "app3",
-							"description": "some app3",
-							"webLink": "some\\web\\link3",
-							"sourceLink": "some\\sourece\\link3"
+							"title": "Layout example #3",
+							"description": "Simple Web Site with one Jumbotron and one image gallery and rows of cards. Used technologies: HTML/CSS/Flexbox",
+							"webLink": "https://lukaszplac.github.io/Project4_5/",
+							"sourceLink": "https://github.com/lukaszplac/Project4_5"
+							},
+							 {
+							"title": "Layout example #4",
+							"description": "Another example of layout cutting. Page was whole made by using Bootstrap custom classes and HTML/CSS",
+							"webLink": "https://lukaszplac.github.io/bootstrap-css-example/",
+							"sourceLink": "https://github.com/lukaszplac/bootstrap-css-example"
 							}
 							]
 		},

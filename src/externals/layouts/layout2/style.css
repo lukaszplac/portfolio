@@ -1,0 +1,192 @@
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+body {
+	margin: 0;
+	font-family: 'Open Sans', sans-serif;
+	background-color: black;
+}
+
+.container {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-justify-content: space-around;
+			justify-content: space-around;
+	-webkit-align-items: center;
+			align-items: center;
+	background-color: black;
+}
+
+
+.container .logo img{
+	display: block;
+	padding: 5px;
+}
+
+.container ul {
+	-webkit-justify-content: flex-end;
+			justify-content: flex-end;
+	display: -webkit-flex;
+	display: flex;
+	list-style-type: none;
+}
+
+.container ul li {
+	padding: 0 15px;
+	text-transform: uppercase;
+	color: white;
+}
+
+.container ul li:hover {
+	color: cyan;
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+.jumbotron {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-justify-content: space-around;
+			justify-content: space-around;
+	-webkit-align-items: center;
+			align-items: center;
+	background-image: url('./bg.jpg');
+	background-size: cover;
+	height: 100vh;
+	-webkit-flex-direction: column;
+}
+
+.jumbotron>.slogan {
+	flex: 0 1 auto;
+	color: white;
+	text-shadow: 2px 2px 2px black;
+	padding: 0 20px;
+	background-color: rgba(0, 0, 0, .5);
+	border-radius: 10px;
+	opacity: 0;
+}
+
+.jumbotron:hover .slogan:not(.popup) {
+	opacity: 1;
+	transition: 1.5s;
+}
+
+.jumbotron>.circle:hover ~.popup{
+	opacity: 1;
+	transition: 1.5s;
+}
+
+.jumbotron>.slogan h1{
+	font-size: 2em;
+}
+
+.jumbotron .circle {
+	border: 15px solid white;
+	border-radius: 50%;
+	opacity: 0.5;
+	cursor: pointer;
+}
+
+.jumbotron .circle:hover {
+	opacity: 1;
+}
+
+.jumbotron .circle:hover .inner-circ {
+	opacity: 1;
+}
+
+.jumbotron>.outer-circ {
+	width: 50px;
+	height: 50px;
+}
+
+.jumbotron>.circle>.inner-circ {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 0;
+	height: 0;
+	margin: 0 auto;
+}
+
+.general {
+	margin: 5%;
+	display: -webkit-flex;
+	display: flex;
+	flex-wrap: wrap
+}
+
+.gallery>img {
+	flex: 1;
+	padding: 2px;
+	border-radius: 10px;
+	opacity: .4;
+	max-width: 100%;
+	height: auto;
+}
+
+.gallery>img:hover {
+	opacity: 1;
+	cursor: pointer;
+}
+
+.cards {
+	color: black;
+	background-color: white;
+	border-radius: 10px;
+	padding: 10px;
+	-webkit-justify-content: center;
+			justify-content: center;
+}
+
+.cards>div{
+	flex: 1;
+	min-width: 200px;
+	border-radius: 10px;
+	background-color: lightblue;;
+	box-shadow: 2px 2px 10px black;
+	margin: 5px;
+	display: flex;
+	-webkit-justify-content: space-around;
+			justify-content: space-around;
+	-webkit-align-items: center;
+			align-items: center;
+	transition: 0.4s;
+}
+
+.cards>div:hover {
+	transform: scale(1.02);
+	background-color: rgba(0, 0,0, .2);
+	cursor: pointer;
+	transition: 0.4s;
+}
+
+.cards>div>p {
+	flex: 0 0 90%;
+}
+
+footer {
+	text-align: center;
+	color: white;
+	font-size: .7em;
+	border-top: 1px solid white;
+}
+
+@media (max-width: 768px) {
+	.container {
+		display: block;
+	}
+	
+	.container>.logo>img {
+		margin: 0 auto;
+	}
+	.container ul {
+		display: block;
+		text-align: center;
+		padding: 0;
+	}
+	
+	.jumbotron>.slogan h1{
+	font-size: 1.5em;
+}
+}

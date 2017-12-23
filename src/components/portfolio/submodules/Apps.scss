@@ -1,4 +1,16 @@
 @import '../../helpers/flex-mixin.scss';
+@import '../../helpers/animation.scss';
+
+@include keyframes(opacity) {
+  0% { background-color: rgba(0, 0, 0, 0);}
+  100% { background-color: rgba(0, 0, 0, 0.75); }
+}
+
+@include keyframes(opacityReverse) {
+  0% { background-color: rgba(0, 0, 0, 0.75);}
+  100% { background-color: rgba(0, 0, 0, 0); }
+}
+
 $font-primary-style: Open Sans, sans-serif;
 $hover-color: #80ccff;
 
@@ -8,5 +20,68 @@ $hover-color: #80ccff;
 
 .notHidden {
 	visibility: visible;
-	@include flex(0 0 20%);
+	@include flex(0 0 100%);
+	@include flexbox();
+	@include flex-direction(row);
+	@include align-items(flex-start);
+	@include align-content(center);
+	@include justify-content(flex-start);
+	@include flex-wrap(wrap);
+	margin: 0 auto;
+	.appContainer {
+		@include flex(0 0 200px);
+		@include animation(opacityReverse .7s forwards);
+		height: 200px;
+		text-align: center;
+		color: black;
+		position: relative;
+		span>.appContentContainer {
+			visibility: hidden;
+		}
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			opacity: 1;
+			z-index: -1;
+		}
+		&:hover {
+			@include animation(opacity .7s forwards);
+			cursor: pointer;
+			span>.appContentContainer {
+				visibility: visible;
+				width: 100%;
+				height: 100%;
+        text-align: center;
+        line-height: 200px;
+				a {
+					color: white;
+          padding: 0 10px;
+          line-height: 1.5;
+          display: inline-block;
+          vertical-align: middle;
+					&:hover {
+						color: $hover-color;
+					}
+				}
+			}
+		}
+	}
+}
+
+.tooltip {
+	font-family: $font-primary-style;
+  max-width: 400px;
+  padding: 10px;
+  margin: 0;
+  .tooltipTitle {
+    padding: 0;
+    margin: 5px 0;
+    color: $hover-color
+  }
+  .tooltipDescr {
+    padding: 0;
+    margin: 5px 0;
+  }
 }

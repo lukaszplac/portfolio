@@ -1,5 +1,8 @@
 import React from 'react';
 import styles from './Apps.scss';
+import { StatefulToolTip } from "react-portal-tooltip"
+import * as Fa from 'react-icons/lib/fa';
+import bg from '../../../../res/img/app.jpg'
 
 class Apps extends React.Component {
 
@@ -15,20 +18,33 @@ class Apps extends React.Component {
 	}
 
 	unhide() {
-		this.setState({hidden: ''});
+			this.setState({hidden: ''});
 	}
 
 	render() {
-    let appsArrayParsedToDomElements = this.props.apps.map((item, i) => (
-      <div key={i+1122} className={this.state.hidden ? styles.hidden : this.props.anim + ' ' + styles.notHidden}>
-         <p>{item.title}</p>
-         <p>{item.description}</p>
-         <p>{item.webLink}</p>
-         <p>{item.sourceLink}</p>
-      </div>
-    ));
+
+    let appsArrayParsedToDomElements = this.props.apps.map((item, i) => {
+								let tooltipDiv = (<div className={styles.appContentContainer}>
+																					 <a href={item.webLink} target="_blank"><Fa.FaEye size='32' /></a>
+																					 <a href={item.sourceLink} target="_blank"><Fa.FaGithub size='32' /></a>
+																  </div>);
+								return (
+									<div
+										key={i+1122}
+										className={styles.appContainer}>
+										<img src={bg}></img>
+										<StatefulToolTip position="top"
+																		 arrow="center"
+																		 parent={tooltipDiv}>
+													<div className={styles.tooltip}>
+														<h4 className={styles.tooltipTitle}>{item.title}</h4>
+														<p className={styles.tooltipDescr}>{item.description}</p>
+													</div>
+										</StatefulToolTip>
+									</div> )
+						    });
 		return(
-			<div>
+			<div className={this.state.hidden ? styles.hidden : this.props.anim + ' ' + styles.notHidden}>
 				{appsArrayParsedToDomElements}
 			</div>
 			)
