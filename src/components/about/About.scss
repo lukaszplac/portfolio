@@ -13,13 +13,13 @@ $hover-color: #80ccff;
     @include align-items(flex-start);
     @include align-content(center);
     @include justify-content(space-around);
-    @include flex-wrap(wrap);	 
+    @include flex-wrap(wrap);
 	div.aboutText {
-		@include flex(0 0 45%);
+		@include flex(0 0 60%);
 		@include order(1);
 	}
 	div.aboutImage {
-		@include flex(0 0 45%);
+		@include flex(0 0 30%);
 		@include order(0);
 	}
 }

@@ -6,25 +6,29 @@
 							"title": "Layout example #1",
 				      "description": "Example of my layout cutting abilities. This page was made using only HTML/CSS and suport css library animated.css",
 				      "webLink": "https://lukaszplac.github.io/Project3_3/",
-							"sourceLink": "https://github.com/lukaszplac/Project3_3"
+							"sourceLink": "https://github.com/lukaszplac/Project3_3",
+							"bgName": "img3_3.png"
 							},
 							 {
 							"title": "Layout example #2",
 				      "description": "Another example of my layout cutting abilities. This page was made using mostly Bootstrap custom classes and HTML",
 				      "webLink": "https://lukaszplac.github.io/Project3_4/",
-							"sourceLink": "https://github.com/lukaszplac/Project3_4"
+							"sourceLink": "https://github.com/lukaszplac/Project3_4",
+							"bgName": "img3_4.png"
 							},
 							 {
 							"title": "Layout example #3",
 							"description": "Simple Web Site with one Jumbotron and one image gallery and rows of cards. Used technologies: HTML/CSS/Flexbox",
 							"webLink": "https://lukaszplac.github.io/Project4_5/",
-							"sourceLink": "https://github.com/lukaszplac/Project4_5"
+							"sourceLink": "https://github.com/lukaszplac/Project4_5",
+							"bgName": "img4_5.png"
 							},
 							 {
 							"title": "Layout example #4",
 							"description": "Another example of layout cutting. Page was whole made by using Bootstrap custom classes and HTML/CSS",
 							"webLink": "https://lukaszplac.github.io/bootstrap-css-example/",
-							"sourceLink": "https://github.com/lukaszplac/bootstrap-css-example"
+							"sourceLink": "https://github.com/lukaszplac/bootstrap-css-example",
+							"bgName": "bootstrapCss.png"
 							}
 							]
 		},
@@ -32,17 +36,26 @@
 			"wait": 800,
 			"title": "Web applications",
 			"apps": [{
-							"title": "app1",
-							"description": "some app1",
-							"webLink": "some\\web\\link1",
-							"sourceLink": "some\\sourece\\link1"
+							"title": "My Portfolio",
+							"description": "This Portfolio is a Web App! It`s whole been written in React framework using additional usefull libraries like react-router, react-tooltip or animated.css that provides basic animations for html content. App is maintained and build using Webpack package bundler. All styling is written in Scss preprocesor and then (using appropriate loader) it is compiled to css. Have fun using it!",
+							"webLink": "https://lukaszplac.github.io/",
+							"sourceLink": "https://github.com/lukaszplac/portfolio",
+							"bgName": "portfolio.png"
 							},
 							 {
-							"title": "app2",
-							"description": "some app2",
-							"webLink": "some\\web\\link2",
-							"sourceLink": "some\\sourece\\link2"
-							}
+							"title": "Memory game",
+							"description": "Memory game is good for your brain! You may choose from 3 different sizes 16, 32 or 64 tiles. For each tiles you have to find its counterpart. This game is an effect of my playing with ES6 standard for Javascript. DOM manipulation is based on jQuery library. Have fun!",
+							"webLink": "https://lukaszplac.github.io/memory-game/",
+							"sourceLink": "https://github.com/lukaszplac/memory-game",
+							"bgName": "memory.png"
+							 },
+							{
+						 "title": "Hangmen",
+						 "description": "This is simple game where you have to figure out the sentence before they hang you!. Game is written in Javascript. DOM manipuation is provided by jQuery",
+						 "webLink": "https://lukaszplac.github.io/hangmen/",
+						 "sourceLink": "https://github.com/lukaszplac/hangmen",
+						 "bgName": "hangmen.png"
+						   }
 							]
 			}
 	]

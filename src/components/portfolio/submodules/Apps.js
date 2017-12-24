@@ -2,7 +2,6 @@ import React from 'react';
 import styles from './Apps.scss';
 import { StatefulToolTip } from "react-portal-tooltip"
 import * as Fa from 'react-icons/lib/fa';
-import bg from '../../../../res/img/app.jpg'
 
 class Apps extends React.Component {
 
@@ -24,6 +23,7 @@ class Apps extends React.Component {
 	render() {
 
     let appsArrayParsedToDomElements = this.props.apps.map((item, i) => {
+								let backgroundLink =' ../../../../res/img/appsbg/' + item.bgName;
 								let tooltipDiv = (<div className={styles.appContentContainer}>
 																					 <a href={item.webLink} target="_blank"><Fa.FaEye size='32' /></a>
 																					 <a href={item.sourceLink} target="_blank"><Fa.FaGithub size='32' /></a>
@@ -32,7 +32,7 @@ class Apps extends React.Component {
 									<div
 										key={i+1122}
 										className={styles.appContainer}>
-										<img src={bg}></img>
+										<img src={backgroundLink}></img>
 										<StatefulToolTip position="top"
 																		 arrow="center"
 																		 parent={tooltipDiv}>
