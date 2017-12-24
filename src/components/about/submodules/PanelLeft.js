@@ -32,15 +32,15 @@ class PanelLeft extends React.Component {
 				let randomAnimation = Math.floor(Math.random() * (this.state.animations.length));
 				paragraphsArray.push(
 				<Paragraph key={i*100}
-						   wait={this.props.wait+700+i*100}
-						   anim={this.state.animations[randomAnimation]}
+						   wait={this.props.anim ? this.props.wait+700+i*100 : this.props.wait}
+						   anim={this.props.anim ? this.state.animations[randomAnimation] : ''}
 						   text={this.props[keys[i]]}/>
 				)
 			}
 		}
 		return(
 			<div key={this.props.number} className={styles.content}>
-				<h4 className={this.state.hidden ? styles.hidden : 'animated '+ this.props.anim + ' ' + styles.notHidden}>{this.props.title}</h4>
+				<h4 className={this.state.hidden ? styles.hidden : ["animated ", this.props.anim, styles.notHidden].join(' ')}>{this.props.title}</h4>
 				{paragraphsArray}
 			</div>
 			)

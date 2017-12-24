@@ -1,4 +1,5 @@
 @import '../../helpers/animation.scss';
+$break-medium: 768px;
 
 @include keyframes(animFirst) {
   0% { opacity: 0; }
@@ -22,30 +23,34 @@
 .images {
   text-align: center;
 	img {
-		  max-width: 450px;
+		  max-width: 100%;
     	height: auto;
     	&:first-child {
-    		@include animation(animFirst 0.8s linear);
+        @include animation(animFirst 0.8s linear);
+        @media screen and (max-width: $break-medium) {
+            display: block;
+        }
     	}
     	&:last-child {
     		display: none;
     		opacity: 0;
     	}
-	}
-
+    }
 }
 
 .unhide {
   text-align: center;
 	img {
-		  max-width: 450px;
+		  max-width: 100%;
     	height: auto;
     	&:first-child {
     		display: none;
     	}
     	&:last-child {
-    		@include animation(animSecond 0.5s ease-out 0.1s);
-
+        @include animation(animSecond 0.5s ease-out 0.1s);
+        @media screen and (max-width: $break-medium) {
+            display: block;
+        }
     	}
-	}
+  }
 }

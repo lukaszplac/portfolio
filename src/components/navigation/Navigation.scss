@@ -2,6 +2,7 @@
 @import '../helpers/flex-mixin.scss';
 $font-primary-style: Open Sans, sans-serif;
 $hover-color: #80ccff;
+$break-small: 576px;
 
 .navi {
 	font-family: $font-primary-style;
@@ -11,7 +12,7 @@ $hover-color: #80ccff;
     @include flexbox();
     @include flex-direction(row);
     @include align-items(center);
-    @include align-content(row);
+    @include align-content(center);
     @include justify-content(space-around);
     @include flex-wrap(wrap);
     div>h2 {
@@ -24,12 +25,15 @@ $hover-color: #80ccff;
             color: white;
             text-decoration: none;
             &:hover {
-                color: $hover-color; 
+                color: $hover-color;
             }
         }
     }
     div.links {
     	@include flex(40%);
+			@media screen and (max-width: $break-small) {
+				@include flex(100%);
+			}
     	>ul {
     		text-align: center;
     		padding: 0;
@@ -46,7 +50,10 @@ $hover-color: #80ccff;
 
     div.contacts {
     	@include flex(15%);
-    	text-align: center;	
+    	text-align: center;
+			@media screen and (max-width: $break-small) {
+				@include flex(100%);
+			}
     	.icon {
     		color: white;
     		padding: 0 5px;
@@ -62,4 +69,3 @@ div.links>ul>li>a {
 		color: $hover-color;
 	}
 }
-
