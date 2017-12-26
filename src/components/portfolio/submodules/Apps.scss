@@ -72,16 +72,16 @@ $hover-color: #80ccff;
 
 .tooltip {
 	font-family: $font-primary-style;
-  max-width: 400px;
-  padding: 10px;
+  max-width: 350px;
+  padding: 0;
   margin: 0;
-  .tooltipTitle {
-    padding: 0;
-    margin: 5px 0;
-    color: $hover-color
-  }
-  .tooltipDescr {
-    padding: 0;
-    margin: 5px 0;
-  }
+    .tooltipTitle {
+      padding: 0;
+      margin: 5px 0;
+      text-decoration: underline;
+    }
+    .tooltipDescr {
+      padding: 0;
+      margin: 5px 0;
+    }
 }

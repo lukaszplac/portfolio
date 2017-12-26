@@ -2,12 +2,16 @@
 @import '../helpers/flex-mixin.scss';
 $font-primary-style: Open Sans, sans-serif;
 $hover-color: #80ccff;
+$break-medium: 768px;
 
 .portfolio {
 	font-family: $font-primary-style;
 	color: black;
 	padding: 10px 10px;
 	margin-top: 20px;
+	@media screen and (min-width: $break-medium) {
+		margin-left: 10%;
+	}
     @include flexbox();
     @include flex-direction(row);
     @include align-items(flex-start);
@@ -16,6 +20,7 @@ $hover-color: #80ccff;
     @include flex-wrap(wrap);
 	div.header {
 		@include flex(0 0 80%);
+		overflow: hidden;
 	}
 	div.app {
 		@include flex(0 0 80%);
@@ -25,5 +30,6 @@ $hover-color: #80ccff;
 		@include align-content(center);
 		@include justify-content(flex-start);
 		@include flex-wrap(wrap);
+		overflow: hidden;
 	}
 }

@@ -1,27 +1,59 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 @import '../helpers/flex-mixin.scss';
+@import '../helpers/animation.scss';
 $font-primary-style: Open Sans, sans-serif;
 $hover-color: #80ccff;
+$break-medium: 768px;
 $break-small: 576px;
+
+@include keyframes(translate) {
+  0% {
+			transform: translateX(0);
+			}
+  100% {
+			transform: translateX(40px);
+			scale: (20%);
+			}
+}
+
 
 .navi {
 	font-family: $font-primary-style;
 	background-color: black;
+  position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	max-width: 10%;
 	color: white;
 	padding: 10px 0;
-    @include flexbox();
-    @include flex-direction(row);
-    @include align-items(center);
-    @include align-content(center);
-    @include justify-content(space-around);
-    @include flex-wrap(wrap);
-    div>h2 {
+	z-index: 1;
+	@include flexbox();
+	@include flex-direction(column);
+	@include align-items(center);
+	@include align-content(center);
+	@include justify-content(center);
+	@include flex-wrap(wrap);
+	@media screen and (max-width: $break-medium) {
+		height: auto;
+		max-width: 100%;
+		position: initial;
+		left: 0;
+		@include flex-direction(row);
+	}
+
+    div>h3 {
     	text-align: center;
+			padding: 0 10px;
+			@media screen and (min-width: $break-medium) {
+				transform: rotate(-90deg);
+			  padding: 15px 0;
+			}
     }
 
     div.logo {
     	@include flex(15%);
-        >h2>a {
+        >h3>a {
             color: white;
             text-decoration: none;
             &:hover {
@@ -39,7 +71,12 @@ $break-small: 576px;
     		padding: 0;
     		>li {
 	    		display: inline-block;
-	    		padding: 0 15px;
+	    		padding: 0 10px;
+					@media screen and (min-width: $break-medium) {
+						transform: rotate(-90deg);
+						display: block;
+						padding: 30px 0;
+					}
 	    		>a {
 	    		color: white;
 	    		text-decoration: none;
@@ -56,7 +93,11 @@ $break-small: 576px;
 			}
     	.icon {
     		color: white;
-    		padding: 0 5px;
+				@media screen and (min-width: $break-medium) {
+					display: block;
+					padding: 5px 0;
+				}
+    		padding: 0 5px;;
     		&:hover {
     			color: $hover-color;
     		}
@@ -67,5 +108,6 @@ $break-small: 576px;
 div.links>ul>li>a {
 	&:hover {
 		color: $hover-color;
+		text-decoration: underline;
 	}
 }

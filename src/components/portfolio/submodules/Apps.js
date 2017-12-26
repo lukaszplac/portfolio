@@ -21,7 +21,18 @@ class Apps extends React.Component {
 	}
 
 	render() {
-
+		let tStyle = {
+      style: {
+        background: '#7fc7ff',
+        padding: '10px',
+        boxShadow: '5px 5px 3px rgba(0,0,0,.5)',
+				borderRadius: '15px'
+      },
+      arrowStyle: {
+        color: 'rgba(0,0,0,.8)',
+        borderColor: true
+      }
+    }
     let appsArrayParsedToDomElements = this.props.apps.map((item, i) => {
 								let backgroundImage = require('../../../../res/img/appsbg/' + item.bgName);
 								let tooltipDiv = (<div className={styles.appContentContainer}>
@@ -33,9 +44,10 @@ class Apps extends React.Component {
 										key={i+1122}
 										className={styles.appContainer}>
 										<img src={backgroundImage}></img>
-										<StatefulToolTip position="top"
-																		 arrow="center"
-																		 parent={tooltipDiv}>
+										<StatefulToolTip position="right"
+																		 arrow="bottom"
+																		 parent={tooltipDiv}
+																		 style={tStyle}>
 													<div className={styles.tooltip}>
 														<h4 className={styles.tooltipTitle}>{item.title}</h4>
 														<p className={styles.tooltipDescr}>{item.description}</p>
