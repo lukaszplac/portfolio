@@ -9,8 +9,8 @@ class Navigation extends React.Component {
 	}
 	render() {
 	return(
-		<div className={'animated fadeInDown'}>
-			<div className={styles.navi}>
+		<div>
+			<div className={[styles.navi, 'animated fadeInLeft'].join(' ')}>
 				<div className={styles.logo}>
 					<h3><Link className={styles.link} to={'/'}>{"<code/>"}</Link></h3>
 				</div>

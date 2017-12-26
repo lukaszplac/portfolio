@@ -12,7 +12,7 @@ $break-small: 576px;
 			color: black;
 			}
 	50% {
-      color: yellow;
+      color: red;
 			}
   100% {
 			transform: rotate(720deg);
@@ -20,12 +20,18 @@ $break-small: 576px;
 			}
 }
 
+@include keyframes(button) {
+  0% {
+			background-color: #00001a;
+			}
+  100% {
+			background-color: $hover-color;
+			}
+}
+
 .contact {
 	font-family: $font-primary-style;
 	color: black;
-  >* {
-    border: 1px solid blue;
-  }
   margin-top: 10%;
   @media screen and (min-width: $break-medium) {
     margin-left: 10%;
@@ -59,6 +65,23 @@ $break-small: 576px;
 			text-align: center;
 			margin: 30px 0;
 		}
+    button {
+      padding: 10px 50px;
+      border: none;
+      border-radius: 3px;
+      background-color: #00001a;
+      box-shadow: 2px 2px 5px #888888;
+      color: white;
+      &:hover {
+        @include animation(button .5s ease-out forwards);
+        color: black;
+        cursor: pointer;
+      }
+      &:focus, &:active {
+        outline: none;
+        border: none;
+      }
+    }
 		.icon {
 			color: black;
 			margin: 10px 0;

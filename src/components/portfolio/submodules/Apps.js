@@ -39,13 +39,20 @@ class Apps extends React.Component {
 																					 <a href={item.webLink} target="_blank"><Fa.FaEye size='32' /></a>
 																					 <a href={item.sourceLink} target="_blank"><Fa.FaGithub size='32' /></a>
 																  </div>);
+								let viewWidth = document.documentElement.clientWidth;
+								let position = "bottom";
+								let arrow = "center";
+								if (viewWidth >= 753) {
+											position = "right";
+											arrow = "bottom";
+									}
 								return (
 									<div
 										key={i+1122}
 										className={styles.appContainer}>
 										<img src={backgroundImage}></img>
-										<StatefulToolTip position="right"
-																		 arrow="bottom"
+										<StatefulToolTip position={position}
+																		 arrow={arrow}
 																		 parent={tooltipDiv}
 																		 style={tStyle}>
 													<div className={styles.tooltip}>
