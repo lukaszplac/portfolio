@@ -21,39 +21,45 @@ $break-medium: 768px;
 			}
 }
 
-.start {
-	font-family: $font-primary-style;
-	color: black;
-	padding: 10px 10px;
-	margin-top: 20px;
-	@media screen and (min-width: $break-medium) {
-		margin-left: 10%;
-	}
+div.parent {
+  .start {
+  	font-family: $font-primary-style;
+    // * {
+    //   border: 1px solid blue;
+    // }
+  	color: black;
+  	padding: 10px 0;
+  	margin-top: 5%;
+  	@media screen and (min-width: $break-medium) {
+  		margin-left: 10%;
+  	}
     @include flexbox();
     @include flex-direction(row);
     @include align-items(center);
     @include align-content(center);
     @include justify-content(center);
     @include flex-wrap(wrap);
-	text-align: center;
-	overflow: hidden;
-	div.info {
-		@include flex(0 0 27.5%);
-		@media screen and (max-width: $break-medium) {
-			@include flex(0 0 80%);
-			@include order(1);
-		}
-	}
-	div.image {
-		@include flex(0 0 45%);
-		img {
-			max-width: 100%;
-    	height: auto;
-			@include animation(rotate 3s ease-in-out 0.8s infinite)
-		}
-		@media screen and (max-width: $break-medium) {
-			@include flex(0 0 80%);
-			@include order(0);
-		}
-	}
+  	text-align: center;
+  	overflow: hidden;
+  	div.info {
+  		@include flex(0 0 27.5%);
+  		@media screen and (max-width: $break-medium) {
+  			@include flex(0 0 80%);
+  			@include order(1);
+  		}
+  	}
+  	div.image {
+  		@include flex(0 0 45%);
+      animation-duration: 1.5s;
+  		img {
+  			max-width: 100%;
+      	height: auto;
+  			@include animation(rotate 3s ease-in-out 1.5s infinite)
+  		}
+  		@media screen and (max-width: $break-medium) {
+  			@include flex(0 0 80%);
+  			@include order(0);
+  		}
+  	}
+  }
 }

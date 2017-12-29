@@ -22,16 +22,17 @@ class Start extends React.Component {
 					(<ContentRight key={i} number={i} {...item} anim="fadeInRight"/>)
 			);
 		return(
-
-			<div className={styles.start}>
-				<div className={'animated fadeInLeft ' + styles.info}>
-					{contentParsedToDomElementsLeft}
-				</div>
-				<div className={'animated flip ' + styles.image}>
-					<img src={me}></img>
-				</div>
-				<div className={'animated fadeInRight ' + styles.info}>
-					{contentParsedToDomElementsRight}
+			<div className={styles.parent}>
+				<div className={styles.start}>
+					<div className={'animated fadeInLeft ' + styles.info}>
+						{contentParsedToDomElementsLeft}
+					</div>
+					<div className={'animated flip ' + styles.image}>
+						<img src={me}></img>
+					</div>
+					<div className={'animated fadeInRight ' + styles.info}>
+						{contentParsedToDomElementsRight}
+					</div>
 				</div>
 			</div>
 			)
