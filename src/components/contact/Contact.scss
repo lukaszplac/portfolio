@@ -37,12 +37,12 @@ $break-small: 576px;
     margin-left: 10%;
   }
 	overflow: hidden;
-    @include flexbox();
-    @include flex-direction(row);
-    @include align-items(center);
-    @include align-content(center);
-    @include justify-content(center);
-    @include flex-wrap(wrap);
+  @include flexbox();
+  @include flex-direction(row);
+  @include align-items(center);
+  @include align-content(center);
+  @include justify-content(center);
+  @include flex-wrap(wrap);
 	div.handshake {
 		@include flex(0 0 40%);
 		@include order(0);
@@ -65,6 +65,15 @@ $break-small: 576px;
 			text-align: center;
 			margin: 30px 0;
 		}
+    h1 {
+      animation-delay: 0.5s;
+    }
+    p {
+      animation-delay: 0.9s;
+    }
+    h5 {
+      animation-delay: 1.3s;
+    }
     button {
       padding: 10px 50px;
       border: none;

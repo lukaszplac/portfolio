@@ -1,42 +1,42 @@
 {
 	"contentLeft": [{
-			"wait": 1000,
+			"wait": 3000,
 			"title": "Web designer",
 			"text": "HTML/CSS/Bootstrap/Flexbox based web sites"
 		},
 		{
-			"wait": 1500,
+			"wait": 3400,
 			"title": "Javascript developer",
 			"text": "ES5/6, jQuery, React/Redux/React-router based apps"
 		},
 		{
-			"wait": 2000,
+			"wait": 3800,
 			"title": "Java enthusiast",
 			"text": "Java8, Spring, Hibernate user"
 		},
 		{
-			"wait": 2500,
+			"wait": 4200,
 			"title": "Just programmer",
 			"text": "Always wanting to grasp new stuff.."
 		}
 	],
 	"contentRight": [{
-			"wait": 500,
+			"wait": 3200,
 			"title": "Many faces...",
 			"text": ""
 		},
 		{
-			"wait": 1000,
+			"wait": 3600,
 			"title": "Many ideas...",
 			"text": ""
 		},
 		{
-			"wait": 1500,
+			"wait": 4000,
 			"title": "Many coding hours...",
 			"text": ""
 		},
 		{
-			"wait": 2300,
+			"wait": 4400,
 			"title": "One Brain",
 			"text": ""
 		}
