@@ -36,6 +36,13 @@
 						 "webLink": "https://lukaszplac.github.io/flexbox-sass-example/",
 						 "sourceLink": "https://github.com/lukaszplac/flexbox-sass-example",
 						 "bgName": "flexEx1.png"
+					 		},
+							{
+						 "title": "Layout example #6",
+						 "description": "Again the combination of Bootstrap (buttons, form styling) and CSS Flexbox (flexible grid). All styling written in Sass preprocessor and then compiled to CSS using Grunt task runner.",
+						 "webLink": "https://lukaszplac.github.io/flexbox-sass-example2/",
+						 "sourceLink": "https://github.com/lukaszplac/flexbox-sass-example2",
+						 "bgName": "flexEx2.png"
 						 }
 							]
 		},
