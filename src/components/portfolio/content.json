@@ -76,13 +76,6 @@
 							"webLink": "https://protected-garden-44029.herokuapp.com/",
 							"sourceLink": "https://github.com/lukaszplac/kanban-app",
 							"bgName": "kanban.png"
-							 },
-							 {
-							"title": "BeerApp",
-							"description": "This app is another showcase of React/Redux/react-router. It uses Punk API to obtain list of beers and lets user to view them and add as favorites. Google Firebase server were used to store data. App was created using create-react-app boilerplate project. Enjoy!",
-							"webLink": "https://lukaszplac.github.io/beer-app/",
-							"sourceLink": "https://github.com/lukaszplac/beer-app",
-							"bgName": "beer.png"
 							 }
 							]
 			}
