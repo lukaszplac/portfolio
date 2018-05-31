@@ -76,6 +76,13 @@
 							"webLink": "https://protected-garden-44029.herokuapp.com/",
 							"sourceLink": "https://github.com/lukaszplac/kanban-app",
 							"bgName": "kanban.png"
+							 },
+							 {
+							"title": "Random quote machine",
+							"description": "Let`s get some inspiring random quote and tweet it worldwide. This simple app is the combination of Sass and Javascript (jQuery). It gets data from API and allows you to send it via twitter",
+							"webLink": "https://lukaszplac.github.io/fcc-random-quote/",
+							"sourceLink": "https://github.com/lukaszplac/fcc-random-quote",
+							"bgName": "quote.jpg"
 							 }
 							]
 			}
