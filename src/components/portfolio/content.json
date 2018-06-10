@@ -90,7 +90,14 @@
 							"webLink": "https://lukaszplac.github.io/fcc-random-quote/",
 							"sourceLink": "https://github.com/lukaszplac/fcc-random-quote",
 							"bgName": "quote.jpg"
-							 }
+							 },
+							 {
+								"title": "Calculator",
+							"description": "Did you always have difficulties with math? This simple app should help you. It has been written in React and is mainatained by Webpack bundler. I used also some juery to include my navigation sidebar to get things working. Have fun!",
+								"webLink": "https://lukaszplac.github.io/fcc-calculator/",
+								"sourceLink": "https://github.com/lukaszplac/fcc-calculator",
+								"bgName": "calc.jpg"
+								 }
 							]
 			}
 	]
