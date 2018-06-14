@@ -1,39 +1,98 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import '../../variables';
 @import '../helpers/flex-mixin.scss';
 @import '../helpers/animation.scss';
-$font-primary-style: Open Sans, sans-serif;
+$font-primary-style: 'Montserrat', sans-serif;
 $hover-color: #80ccff;
 $break-medium: 768px;
 $break-small: 576px;
 
-@include keyframes(translate) {
-  0% {
-			transform: translateX(0);
-			}
-  100% {
-			transform: translateX(40px);
-			scale: (20%);
-			}
-}
-
-
-.navi {
+@mixin naviMixin {
 	font-family: $font-primary-style;
-	background-color: #14233a;
-  position: fixed;
+	font-weight: 300;
+	background-color: rgba($bg-deepblue, .1);
+  	position: fixed;
 	top: 0;
 	left: 0;
 	height: 100%;
-	max-width: 10%;
-	color: white;
-	padding: 10px 0;
+	width: 3%;
+	color: $primary-color-text;
+	padding: 5px 5px;
 	z-index: 1;
+	transition: all .5s;
 	@include flexbox();
 	@include flex-direction(column);
 	@include align-items(center);
 	@include align-content(center);
 	@include justify-content(center);
 	@include flex-wrap(wrap);
+}
+
+.navi1 {
+	@include naviMixin;
+	.arrowLeft {
+		animation: arrows 2s infinite;
+	}
+	.links {
+		position: absolute;
+		display: none;
+		left: -30%;
+		top: 50%;
+		transform: translateY(-50%);
+		opacity: 0;
+		transition: all 1s;
+		ul li {
+			margin: 5px 0;
+		}
+	}
+	&:hover {
+		width: 99.5%;
+		background-color: rgba($bg-black, .85);
+	}
+
+	&:hover .naviArrows {
+		margin: auto 2% auto auto;
+		.arrowContainer {
+			transform: rotate(180deg);
+		}
+	}
+
+	&:hover .links {
+		animation: linksFading .3s .3s ease-out forwards;
+		display: block;
+		font-weight: 500;
+		ul {
+			list-style-type: none;
+			li {
+				animation: linksMargin .25s .5s ease-out forwards;
+				border: 1px solid $accent-color;
+				border-radius: 4px;
+				padding: 10px 50px;
+				background-image: linear-gradient(45deg, transparent 0, transparent 50%, $accent-color 50%);
+				background-size: 225%;
+				background-position: 0%;
+				transition: all .35s ;
+				&:nth-child(even) {
+				  background-image: linear-gradient(-45deg, transparent 0, transparent 50%, $accent-color 50%);
+				  background-position: 98%;
+				}
+				a {
+					color: $primary-color-text;
+					text-decoration: none;
+					font-size: 1.5rem;
+				}
+				&:hover {
+					background-position: 98%;
+					&:nth-child(even) {
+						background-position: 0;
+					}
+					a {
+						color: $primary-text-color;
+					}
+				}
+			}
+		}
+	}
+
 	@media screen and (max-width: $break-medium) {
 		height: auto;
 		max-width: 100%;
@@ -41,72 +100,54 @@ $break-small: 576px;
 		left: 0;
 		@include flex-direction(row);
 	}
-  div>h3 {
-    text-align: center;
-		padding: 0 10px;
-		@media screen and (min-width: $break-medium) {
-			transform: rotate(-90deg);
-			padding: 15px 0;
-			}
-  }
-
-  div.logo {
-    @include flex(15%);
-      >h3>a {
-          color: white;
-          text-decoration: none;
-          &:hover {
-              color: $hover-color;
-            }
-          }
-  }
-  div.links {
-    @include flex(40%);
-		@media screen and (max-width: $break-small) {
-		@include flex(100%);
-		}
-    >ul {
-    	text-align: center;
-    	padding: 0;
-    	>li {
-	    	display: inline-block;
-	    	padding: 0 10px;
-				@media screen and (min-width: $break-medium) {
-					transform: rotate(-90deg);
-					display: block;
-					padding: 30px 0;
-					}
-	    		>a {
-	    		color: white;
-	    		text-decoration: none;
-	    		}
-	    }
-	   }
-  }
-
-  div.contacts {
-    @include flex(15%);
-    text-align: center;
-		@media screen and (max-width: $break-small) {
-		@include flex(100%);
-		}
-    .icon {
-    	color: white;
-			@media screen and (min-width: $break-medium) {
-			display: block;
-			padding: 5px 0;
-			}
-      padding: 0 5px;;
-    	&:hover {
-    		color: $hover-color;
-    	}
-    }
-  }
 }
 
-div.links>ul>li>a {
-	&:hover {
-		color: $hover-color;
-		text-decoration: underline;
+
+@include keyframes(arrows) {
+	0% {
+		color: $primary-color-text;
+	}
+	30% {
+		color: $accent-color;
+	}
+	50% {
+		color: $accent-color;
+	}
+	70% {
+		color: $accent-color;
+	}
+	100% {
+		color: $primary-color-text;
 	}
 }
+
+@include keyframes(linksFading) {
+	0% {
+		left: -30%;
+		opacity: 0;
+	}
+	70% {
+		opacity: .4
+	}
+	100% {
+		left: 5%;
+		opacity: 1;
+	}
+}
+
+@include keyframes(linksMargin) {
+	0% {
+		margin: 5px 0;
+	}
+	100% {
+		margin: 45px 0;
+	}
+}
+
+.naviReset {
+	* {
+		display: none;
+	}
+}
+
+
