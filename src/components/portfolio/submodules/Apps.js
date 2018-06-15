@@ -23,7 +23,7 @@ class Apps extends React.Component {
 	render() {
 		let tStyle = {
       style: {
-        background: '#7fc7ff',
+        background: '#ff1a6a',
         padding: '10px',
         boxShadow: '5px 5px 3px rgba(0,0,0,.5)',
 				borderRadius: '15px'

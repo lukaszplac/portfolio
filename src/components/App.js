@@ -11,7 +11,7 @@ class App extends Component {
 	
 	render() {
 		return (
-				<div>
+				<div style={{paddingTop: '1%', paddingBottom: '6%'}}>
 					<Navigation />
 					<Route key={'1'} path="/" exact component={Start}/>
 					<Route key={'2'} path="/portfolio" exact component={Portfolio}/>

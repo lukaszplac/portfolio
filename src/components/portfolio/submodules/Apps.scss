@@ -1,5 +1,7 @@
 @import '../../helpers/flex-mixin.scss';
 @import '../../helpers/animation.scss';
+@import '../../../variables';
+$break-medium: 768px;
 
 @include keyframes(opacity) {
   0% { background-color: rgba(0, 0, 0, 0);}
@@ -11,7 +13,7 @@
   100% { background-color: rgba(0, 0, 0, 0); }
 }
 
-$font-primary-style: Open Sans, sans-serif;
+$font-primary-style: Montserrat, sans-serif;
 $hover-color: #80ccff;
 
 .hidden {
@@ -35,6 +37,10 @@ $hover-color: #80ccff;
 		text-align: center;
 		color: black;
 		position: relative;
+		@media screen and (max-width: $break-medium) {
+			margin: 0 auto;
+			width: 80%;
+		}
 		span>.appContentContainer {
 			visibility: hidden;
 		}
@@ -56,13 +62,13 @@ $hover-color: #80ccff;
         text-align: center;
         line-height: 200px;
 				a {
-					color: white;
+					color: $primary-color-text;
           padding: 0 10px;
           line-height: 1.5;
           display: inline-block;
           vertical-align: middle;
 					&:hover {
-						color: $hover-color;
+						color: $accent-color;
 					}
 				}
 			}

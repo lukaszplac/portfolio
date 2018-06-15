@@ -32,9 +32,9 @@ $break-small: 576px;
 .contact {
 	font-family: $font-primary-style;
 	color: black;
-  margin-top: 10%;
+	padding-top: 70px;
   @media screen and (min-width: $break-medium) {
-    margin-left: 10%;
+    margin-left: 5%;
   }
 	overflow: hidden;
   @include flexbox();
@@ -44,7 +44,7 @@ $break-small: 576px;
   @include justify-content(center);
   @include flex-wrap(wrap);
 	div.handshake {
-		@include flex(0 0 40%);
+		@include flex(0 0 50%);
 		@include order(0);
 		img {
 			width: 100%;

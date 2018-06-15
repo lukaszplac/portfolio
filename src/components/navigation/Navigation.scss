@@ -20,11 +20,32 @@ $break-small: 576px;
 	z-index: 1;
 	transition: all .5s;
 	@include flexbox();
-	@include flex-direction(column);
+	@include flex-direction(row);
 	@include align-items(center);
 	@include align-content(center);
 	@include justify-content(center);
 	@include flex-wrap(wrap);
+}
+
+.mediaIcon {
+	display: none;
+	position: absolute;
+	@media screen and (max-width: $break-medium) {
+		display: flex;
+		flex-direction: column;
+		width: 40px;
+		top: 10px;
+		left: 10px;
+		//padding: 10px;
+		div {
+			width: 80%;
+			border: 1px solid black;
+			margin: 5px auto;
+		}
+		& + .navi1 {
+			display: none;
+		}
+	}
 }
 
 .navi1 {
@@ -44,8 +65,11 @@ $break-small: 576px;
 			margin: 5px 0;
 		}
 	}
+	.social {
+		display: none;
+	}
 	&:hover {
-		width: 99.5%;
+		width: 99%;
 		background-color: rgba($bg-black, .85);
 	}
 
@@ -93,14 +117,93 @@ $break-small: 576px;
 		}
 	}
 
-	@media screen and (max-width: $break-medium) {
-		height: auto;
-		max-width: 100%;
-		position: initial;
-		left: 0;
-		@include flex-direction(row);
+	&:hover .social {
+		position: absolute;
+		display: block;
+		left: 40%;
+		width: 30%;
+		height: 40px;
+		border: 1px solid $primary-color-text;
+		border-radius: 4px;
+		transition: all .4s;
+		.socialIcon, .mask {
+			display: none;
+			opacity: 0;
+		}
+		p {
+			font-size: 1.5rem;
+			margin: auto;
+			height: 100%;
+			line-height: 150%;
+			text-align: center;
+		}
+		.socialIcon:first-child {
+			position: absolute;
+			left: 25%;
+			top: 25%;
+		}
+		.socialIcon:nth-child(2) {
+			position: absolute;
+			right: 25%;
+			top: 25%;
+		}
+		.socialIcon:nth-child(3) {
+			position: absolute;
+			left: 40%;
+			top: 55%;
+		}
+		&:hover {
+			width: 250px;
+			height: 250px;
+			left: 45%;
+			border-radius: 50%;
+			border-color: $accent-color;
+			border-width: 3px;
+			.socialIcon {
+				display: block;
+				opacity: 1;
+				z-index: 10;
+				a, a:active, a:link {
+					transition: all .3s;
+					color: $primary-color-text;
+				}
+				&:hover {
+					a {
+						color: $accent-color;
+					}
+					cursor: pointer;
+				}
+				&:first-child:hover ~ .mask {
+					transform: rotate(-0deg);
+				}
+				&:nth-child(2):hover ~ .mask {
+					transform: rotate(90deg);
+				}
+				&:nth-child(3):hover ~ .mask {
+					transform: rotate(225deg);
+				}
+			}
+			.mask {
+				position: absolute;
+				display: block;
+				opacity: 1;
+				left: 15%;
+				top: 15%;
+				border: 8px solid $accent-color;
+				border-radius: 50%;
+				z-index: 9;
+				transform-origin: 550% 550%;
+				transform: rotate(45deg);
+				transition: all .3s;
+			}
+			p {
+				display: none;
+			}
+		}
 	}
 }
+
+
 
 
 @include keyframes(arrows) {
