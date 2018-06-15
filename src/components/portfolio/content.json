@@ -71,13 +71,6 @@
 							"bgName": "memory.png"
 							 },
 							{
-						 	"title": "Hangmen",
-						 	"description": "This is a simple game where you have to figure out the sentence before they hang you!. Game is written in Javascript. DOM manipuation is provided by jQuery",
-						 	"webLink": "https://lukaszplac.github.io/hangmen/",
-						 	"sourceLink": "https://github.com/lukaszplac/hangmen",
-						 	"bgName": "hangmen.png"
-							 },
-							{
 							"title": "Kanban",
 							"description": "This app is a showcase of React/Redux/react-router together with MongoDB. It lets user to create Lanes and Notes. You can change its names, move notes between lanes, delete them etc.. All actions are being managed by Redux actions. State of application is kept on remote MongoDB server. Have fun!",
 							"webLink": "https://protected-garden-44029.herokuapp.com/",
