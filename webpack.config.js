@@ -37,14 +37,16 @@ module.exports = {
 		  	exclude: /node_modules/
 		},
 		{
-			test: /\.(scss)$/,
+      test: /\.(scss)$/,
+      exclude: [/node_modules/],
       use: [{
               loader: "style-loader" // creates style nodes from JS strings
             	},
             	{
               loader: "css-loader", // translates CSS into CommonJS
             	    options: {
-                  modules: true
+                  modules: true,
+                  exclude: [/index.css/]
                 }
             	},
             	{

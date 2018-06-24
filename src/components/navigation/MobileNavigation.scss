@@ -2,10 +2,9 @@
 
 .container {
     position: relative;
-    transition: all .5s;
 }
 .mobile {
-    position: absolute;
+    position: fixed;
     height: 100vh;
     width: 60%;
     left: 0;
@@ -13,6 +12,7 @@
     z-index: 10;
     background-color: $primary-color-light;
     display: flex;
+    animation-duration: .3s;
     .links {
         ul {
             display: flex;
@@ -33,13 +33,13 @@
 }
 
 .backdrop {
-    position: absolute;
+    position: fixed;
     height: 100vh;
     width: 100vw;
     left: 0;
     top: 0;
     z-index: 5;
-    transition: all .5s;
+    transition: all .3s;
     background-color: rgba(0,0,0, .7);
 }
 

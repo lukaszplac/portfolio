@@ -1,44 +1,15 @@
 {
-	"contentLeft": [{
-			"wait": 3000,
-			"title": "Web designer",
-			"text": "HTML/CSS/Bootstrap/Flexbox based web sites"
+	"content": [{
+			"heading": "Web Design",
+			"text": "In my daily work I focus on the appearance of the website and responsiveness. I think that the best thing that can meet a developer is a smile on the user's face. Therefore, user experience, a friendly interface and the speed of the website are so important. I still develop my skills related to HTML, CSS (Sass) and modern front-end libraries such as React and Vue."
 		},
 		{
-			"wait": 3400,
-			"title": "Javascript developer",
-			"text": "ES5/6, jQuery, React/Redux/React-router based apps"
+			"heading": "JS coding",
+			"text": "I think I'm quite familiar with Javascript, with which it is undoubtedly easy to start an adventure, but it is difficult to master an advanced level. I think the basics of javascript are the most important. Knowing them, you can try to develop further skills and get to know more advanced technologies."
 		},
 		{
-			"wait": 3800,
-			"title": "Java enthusiast",
-			"text": "Java8, Spring, Hibernate user"
-		},
-		{
-			"wait": 4200,
-			"title": "Just programmer",
-			"text": "Always wanting to grasp new stuff.."
-		}
-	],
-	"contentRight": [{
-			"wait": 3200,
-			"title": "Many faces...",
-			"text": ""
-		},
-		{
-			"wait": 3600,
-			"title": "Many ideas...",
-			"text": ""
-		},
-		{
-			"wait": 4000,
-			"title": "Many coding hours...",
-			"text": ""
-		},
-		{
-			"wait": 4400,
-			"title": "One Brain",
-			"text": ""
+			"heading": "Wordpress",
+			"text": "Recently I became interested in Wordpress. I appreciate this engine for the multitude of templates and the ability to adapt them to my needs. Although many websites created using Wordpress may look similar, the speed of creating a website is a big advantage. I am constantly developing my Wordpress related skills and I think that soon it will become a valuable asset in my toolkit."
 		}
 	]
 }

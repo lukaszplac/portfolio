@@ -1,0 +1,102 @@
+@import '../../variables';
+
+$break-small: 576px;
+$font-primary-style: 'Montserrat', sans-serif;
+
+.card {
+    width: 15vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: -1rem;
+    display: flex;
+    justify-content: center;
+    border-radius: 1rem;
+    transition: all .5s;
+    padding: 0;
+    animation: hoverMe 2s .4s infinite;
+    .content {
+        flex: 0 0 40rem;
+        font-family: $font-primary-style;
+        font-weight: 200;
+        h2 {
+            font-size: 3rem;
+            border-bottom: 4px solid $accent-color;
+        }
+        p {
+            font-size: 1.4rem;
+            text-align: center;
+            line-height: 150%;
+            letter-spacing: .02rem;
+            transition: all .3s;
+            &::first-letter {
+                position: absolute;
+                font-weight: 500;
+                font-size: 1.6rem;
+                color: $accent-color;
+            }
+            &:hover &::first-letter {
+                transform: rotate(360deg);
+                font-size: 1.8rem;
+            }
+        }
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        position: relative;
+        left: -50rem;
+        opacity: 0;
+        transition: all .25s .2s;
+     }
+}
+
+@media screen and (max-width: $break-small) {
+    [class*="content"] {
+        background-color: green; //pozniej bedzie w propsach
+        width: 20vw;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+    }
+}
+
+.hoverArea {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 15vw;
+    &:hover {
+        width: 90vw;
+        height: 100vh;
+        opacity: 0;
+        //visibility: hidden; ??? jak to zrobic
+    }
+    &:hover + .card {
+        width: 90vw;
+        height: 100vh;
+        animation: none;
+        .content {
+            left: 0;
+            opacity: 1;
+        }
+    }
+}
+
+@keyframes hoverMe {
+    25% {
+        left: -.75rem;
+    }
+    50% {
+        left: -.5rem;
+        }
+    75% {
+        left: -.75rem;
+    }
+    100% {
+        left: -1rem;
+    }
+}

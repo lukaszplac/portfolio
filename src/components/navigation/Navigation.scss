@@ -9,7 +9,7 @@ $break-small: 576px;
 @mixin naviMixin {
 	font-family: $font-primary-style;
 	font-weight: 300;
-	background-color: rgba($bg-deepblue, .1);
+	background-color: rgba($bg-deepblue, .3);
   	position: fixed;
 	top: 0;
 	left: 0;

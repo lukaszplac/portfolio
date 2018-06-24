@@ -1,6 +1,6 @@
 {
 	"contentLeft": [{
-			"wait": 400,
+			"wait": 100,
 			"title": "Layout templates",
 			"apps": [{
 							"title": "Layout example #1",
@@ -54,7 +54,7 @@
 							]
 		},
 		{
-			"wait": 800,
+			"wait": 200,
 			"title": "Web applications",
 			"apps": [{
 							"title": "My Portfolio",
