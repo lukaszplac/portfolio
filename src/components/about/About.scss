@@ -1,42 +1,8 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans);
-@import '../helpers/flex-mixin.scss';
-$font-primary-style: Open Sans, sans-serif;
-$hover-color: #80ccff;
+@import '../../variables';
+@import '../helpers/mixins.scss';
 $break-medium: 768px;
-$break-small: 576px;
 
 .about {
-	font-family: $font-primary-style;
-	color: black;
-	padding: 30px 10px;
-	@media screen and (min-width: $break-medium) {
-		margin-left: 10%;
-	}
-	overflow: hidden;
-    @include flexbox();
-    @include flex-direction(row);
-    @include align-items(flex-start);
-    @include align-content(center);
-    @include justify-content(center);
-    @include flex-wrap(wrap);
-	div.aboutText {
-		@include flex(0 0 40%);
-		@include order(1);
-		@media screen and (max-width: $break-medium) {
-			@include flex(0 0 60%);
-		}
-		@media screen and (max-width: $break-small) {
-			@include flex(0 0 80%);
-		}
-	}
-	div.aboutImage {
-		@include flex(0 0 40%);
-		@include order(0);
-		@media screen and (max-width: $break-medium) {
-			@include flex(0 0 60%);
-		}
-		@media screen and (max-width: $break-small) {
-			@include flex(0 0 80%);
-		}
-	}
+	@include main-heading;
+	background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.65) 20%, rgba(145, 234, 250, 0.65) 80%), url('../../../res/img/notebook.jpg');
 }

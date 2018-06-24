@@ -1,0 +1,24 @@
+.icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+        flex: 0 1 auto;
+        width: 11rem;
+        max-height: auto;
+        padding: 1.5rem;
+        //for large screens bigger icons
+		@media screen and (min-width: 1800px) {
+			width: 15rem;
+		}
+    }
+}
+
+h2 {
+    font-size: 4rem;
+}
+
+p {
+    text-align: center;
+    font-size: 2rem;
+}

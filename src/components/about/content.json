@@ -1,33 +1,12 @@
 {
-	"contentLeft": [{
-			"wait": 350,
-			"title": "Who I am ?",
-			"text1": "I am really happy to live in this world where dreams and ideas can come true. Only thing you need is to be open-minded. Then you achieve everything you want.",
-			"text2": "My latest dream is to become a Web Developer"
+	"content": [{
+			"heading": "Basic info",
+			"text": "Name: Łukasz Plac; Born: 1983; Place of birth: Skwierzyna; School: Wroclaw Univeristy of Technology; Interests: Web Design, Javascript, Computer Science, Music"
 		},
 		{
-			"wait": 700,
-			"title": "How I want to achieve this goal? ",
-			"text1": "I want to code as much as possible :)",
-			"text2": "I finished recently Kodilla Bootcam where I learned how to use:",
-			"text3": "Markup languages: HTML5",
-			"text4": "Cascade Style Sheets: CSS",
-			"text5": "CSS Preprocessors: SASS",
-			"text6": "Task runners: Grunt",
-			"text7": "Package bundlers: Webpack",
-			"text8": "Programming languages: Javascript (ES5/ES6)",
-			"text9": "Javascript framework & libraries: React/Redux, jQuery",
-			"text10": "noSQL databases: MongoDB"
-		},
-		{
-			"wait": 1050,
-			"title": "Who I`m going to be ?",
-			"text1": "I don`t want to stop developing myself so the question is still open."
-		},
-		{
-			"wait": 1400,
-			"title": "When not coding...",
-			"text1": "Well. You can meet me mostly snowboarding or playing tennis. Recently I love a little instrument called harmonica that has great acoustic colour, especially when playing blues music."
+			"heading": "More info",
+			"text": "I am really happy to live in this world where dreams and ideas can come true. Only thing you need is to be open-minded. Then you achieve everything you want.; My latest dream is to become a Web Developer; I finished recently Kodilla Bootcam where I learned many usefull stuff related to Web Development; I don`t want to stop developing myself so the question who I'm going to be is still open; Besides coding, you can meet me mostly snowboarding or playing tennis. Recently I love a little instrument called harmonica that has great acoustic colour, especially when playing blues music.",
+			"fontChangable": true		
 		}
-	]	
+	]
 }

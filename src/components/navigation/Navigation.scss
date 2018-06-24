@@ -1,14 +1,11 @@
 @import '../../variables';
-@import '../helpers/flex-mixin.scss';
-@import '../helpers/animation.scss';
-$font-primary-style: 'Montserrat', sans-serif;
+
 $hover-color: #80ccff;
 $break-medium: 768px;
 $break-small: 576px;
 
 @mixin naviMixin {
-	font-family: $font-primary-style;
-	font-weight: 300;
+	font-weight: 500;
 	background-color: rgba($bg-deepblue, .3);
   	position: fixed;
 	top: 0;
@@ -16,15 +13,14 @@ $break-small: 576px;
 	height: 100%;
 	width: 3%;
 	color: $primary-color-text;
-	padding: 5px 5px;
+	padding: .5rem .5rem;
 	z-index: 1;
 	transition: all .5s;
-	@include flexbox();
-	@include flex-direction(row);
-	@include align-items(center);
-	@include align-content(center);
-	@include justify-content(center);
-	@include flex-wrap(wrap);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	flex-wrap: wrap;
 }
 
 .mediaIcon {
@@ -33,14 +29,13 @@ $break-small: 576px;
 	@media screen and (max-width: $break-medium) {
 		display: flex;
 		flex-direction: column;
-		width: 40px;
-		top: 10px;
-		left: 10px;
-		//padding: 10px;
+		width: 4rem;
+		top: 1rem;
+		left: 1rem;
 		div {
 			width: 80%;
-			border: 1px solid black;
-			margin: 5px auto;
+			border: .1rem solid black;
+			margin: .5rem auto;
 		}
 		& + .navi1 {
 			display: none;
@@ -62,7 +57,7 @@ $break-small: 576px;
 		opacity: 0;
 		transition: all 1s;
 		ul li {
-			margin: 5px 0;
+			margin: .5rem 0;
 		}
 	}
 	.social {
@@ -72,14 +67,12 @@ $break-small: 576px;
 		width: 99%;
 		background-color: rgba($bg-black, .85);
 	}
-
 	&:hover .naviArrows {
 		margin: auto 2% auto auto;
 		.arrowContainer {
 			transform: rotate(180deg);
 		}
 	}
-
 	&:hover .links {
 		animation: linksFading .3s .3s ease-out forwards;
 		display: block;
@@ -89,7 +82,7 @@ $break-small: 576px;
 			li {
 				animation: linksMargin .25s .5s ease-out forwards;
 				border: 1px solid $accent-color;
-				border-radius: 4px;
+				border-radius: .4rem;
 				padding: 10px 50px;
 				background-image: linear-gradient(45deg, transparent 0, transparent 50%, $accent-color 50%);
 				background-size: 225%;
@@ -102,7 +95,7 @@ $break-small: 576px;
 				a {
 					color: $primary-color-text;
 					text-decoration: none;
-					font-size: 1.5rem;
+					font-size: 2.5rem;
 				}
 				&:hover {
 					background-position: 98%;
@@ -122,21 +115,24 @@ $break-small: 576px;
 		display: block;
 		left: 40%;
 		width: 30%;
-		height: 40px;
-		border: 1px solid $primary-color-text;
-		border-radius: 4px;
+		height: 4rem;
+		border: .1rem solid $primary-color-text;
+		border-radius: .4rem;
 		transition: all .4s;
-		.socialIcon, .mask {
-			display: none;
-			opacity: 0;
-		}
+		font-weight: 300;
 		p {
-			font-size: 1.5rem;
+			font-size: 2.5rem;
+			font-weight: 500;
 			margin: auto;
 			height: 100%;
 			line-height: 150%;
 			text-align: center;
 		}
+		.socialIcon, .mask {
+			display: none;
+			opacity: 0;
+		}
+
 		.socialIcon:first-child {
 			position: absolute;
 			left: 25%;
@@ -153,12 +149,12 @@ $break-small: 576px;
 			top: 55%;
 		}
 		&:hover {
-			width: 250px;
-			height: 250px;
+			width: 25rem;
+			height: 25rem;
 			left: 45%;
 			border-radius: 50%;
 			border-color: $accent-color;
-			border-width: 3px;
+			border-width: .3rem;
 			.socialIcon {
 				display: block;
 				opacity: 1;
@@ -189,7 +185,7 @@ $break-small: 576px;
 				opacity: 1;
 				left: 15%;
 				top: 15%;
-				border: 8px solid $accent-color;
+				border: .8rem solid $accent-color;
 				border-radius: 50%;
 				z-index: 9;
 				transform-origin: 550% 550%;
@@ -206,7 +202,7 @@ $break-small: 576px;
 
 
 
-@include keyframes(arrows) {
+@keyframes arrows {
 	0% {
 		color: $primary-color-text;
 	}
@@ -224,7 +220,7 @@ $break-small: 576px;
 	}
 }
 
-@include keyframes(linksFading) {
+@keyframes linksFading {
 	0% {
 		left: -30%;
 		opacity: 0;
@@ -238,7 +234,7 @@ $break-small: 576px;
 	}
 }
 
-@include keyframes(linksMargin) {
+@keyframes linksMargin {
 	0% {
 		margin: 5px 0;
 	}

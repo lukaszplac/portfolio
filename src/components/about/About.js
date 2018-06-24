@@ -1,40 +1,44 @@
-import React from 'react';
-import styles from "./About.scss";
-import PanelRight from './submodules/PanelRight';
-import PanelLeft from './submodules/PanelLeft';
+import React, { Component } from 'react';
+import Card from '../helpers/Card';
 import contentJson from './content.json';
+import styles from './About.scss';
+import AboutContent from './submodules/AboutContent';
+import Header from '../helpers/Header';
 
-class About extends React.Component {
+class About extends Component {
 
-	constructor(props){
+	constructor(props) {
 		super(props);
-	}
-
+	};
+	
 	render() {
-		let viewWidth = document.documentElement.clientWidth;
-		let animateCssClassAboutText = '';
-		let animateCssClassImage = '';
-		let animateCssParagraphs = '';
-		if (viewWidth >= 753) {
-			animateCssClassAboutText = "animated fadeInLeft";
-			animateCssClassImage = "animated fadeInRight";
-			animateCssParagraphs = 'zoomIn'
-		}
-		let contentArrayLeft = Object.values(contentJson.contentLeft);
-		let contentParsedToDomElementsLeft = contentArrayLeft.map((item, i) =>
-					(<PanelLeft key={i} number={i} {...item} anim={animateCssParagraphs}/>)
-			);
+		let colors = ["#ffa372", "#9fff72"];
+		let pics = [["me-about22.jpg"],
+					 ["me-rounded.png"]];
+		let cardSet = contentJson.content.map((card,i) => <Card key={i} 
+																offset={(i+1)*10}
+																background={{color: colors[i]}}
+																zIndex={-100-(i*2)}
+																delay={""+0.2*(i+1)+"s"}
+																direction={"row"}>
+															<AboutContent
+																heading={card.heading}
+																text={card.text}
+																fontChangable={card.fontChangable ? true : false}
+																picsSet={pics[i]}/>
+														  </Card>)
 		return(
 			<div className={styles.about}>
-				<div className={[styles.aboutText, animateCssClassAboutText].join(' ')}>
-					{contentParsedToDomElementsLeft}
-				</div>
-				<div className={[styles.aboutImage, animateCssClassImage].join(' ')}>
-					<PanelRight wait={800}/>
+				{cardSet}
+				<div className={styles.aboutHeader}>
+								<Header welcome="You think you know me?"
+										headerMain="Well, you don`t"
+										headerSub="If you like to find out"
+										text="Tabs will reveal more about me"/>
 				</div>
 			</div>
-		)
-	}
-}
+		);
+	};
+};
 
 export default About;

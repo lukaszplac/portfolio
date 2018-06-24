@@ -16,32 +16,29 @@ $font-primary-style: 'Montserrat', sans-serif;
     padding: 0;
     animation: hoverMe 2s .4s infinite;
     .content {
-        flex: 0 0 40rem;
+        flex: 0 0 85rem;
         font-family: $font-primary-style;
-        font-weight: 200;
+        @media screen and (min-width: 1800px) {
+            flex: 0 0 120rem;
+        }
         h2 {
-            font-size: 3rem;
+            font-weight: 500;
             border-bottom: 4px solid $accent-color;
         }
         p {
-            font-size: 1.4rem;
-            text-align: center;
             line-height: 150%;
             letter-spacing: .02rem;
             transition: all .3s;
+            font-weight: 400;
             &::first-letter {
                 position: absolute;
                 font-weight: 500;
-                font-size: 1.6rem;
+                font-size: 2.5rem;
                 color: $accent-color;
-            }
-            &:hover &::first-letter {
-                transform: rotate(360deg);
-                font-size: 1.8rem;
             }
         }
         display: flex;
-        flex-direction: column;
+        //flex-direction: column; passed inline
         justify-content: center;
         align-content: center;
         align-items: center;
@@ -49,6 +46,14 @@ $font-primary-style: 'Montserrat', sans-serif;
         left: -50rem;
         opacity: 0;
         transition: all .25s .2s;
+        @media screen and (min-width: 1800px) {
+			h2 {
+                font-size: 6rem;
+            }
+            p {
+                font-size: 2.2rem;
+            }
+		}
      }
 }
 
@@ -73,7 +78,6 @@ $font-primary-style: 'Montserrat', sans-serif;
         width: 90vw;
         height: 100vh;
         opacity: 0;
-        //visibility: hidden; ??? jak to zrobic
     }
     &:hover + .card {
         width: 90vw;

@@ -14,23 +14,28 @@ class Start extends React.Component {
 	
 	render() {
 		let colors = ["#9fff72", "#72c9ff", "#ffa372"];
+		let icons = [["html5.png", "css.png", "sass.png", "react.png"],
+					 ["coder-head.png", "javascript.png"],
+					 ["wordpress.png", "cms.png"]]
 		let cardSet = contentJson.content.map((card,i) => <Card key={i} 
 																offset={(i+1)*10}
 																background={{color: colors[i]}}
 																zIndex={-100-(i*2)}
-																delay={""+0.2*(i+1)+"s"}>
+																delay={""+0.2*(i+1)+"s"}
+																direction="column">
 														<StartContent
 															heading={card.heading}
-															text={card.text}/>
+															text={card.text}
+															iconSet={icons[i]}/>
 													</Card>)
 		return (
 					<div className={styles.start}>
 							{cardSet}
 							<div className={styles.startHeader}>
-								<Header headerMain="What Can I Do?"
+								<Header welcome="Hi, my name is Łukasz"
+										headerMain="What Can I Do?"
 										headerSub="Well, pretty much."
-										text="Just explore tabs to find out more!"
-										welcome="Hi, my name is Łukasz"/>
+										text="Just explore tabs to find out more!"/>
 							</div>
 					</div>
 		);

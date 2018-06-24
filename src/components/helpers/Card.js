@@ -8,13 +8,13 @@ const Card = (props) => {
         clipPath: `polygon(0 0, 100% 0, 100% ${offset}px, calc(100% - 30px) ${offset}px, calc(100% - 30px) 100%, 0 100%, 0 0)`,
         backgroundColor: props.background.color,
         zIndex: props.zIndex,
-        animationDelay: props.delay
+        animationDelay: props.delay,
     }
     return(
         <AuxComp>
             <div className={styles.hoverArea} style={{minHeight: `${offset}px`, zIndex: props.zIndex+1}}></div>
             <div className={styles.card} style={inlineStyling}>
-                <div className={styles.content}>
+                <div className={styles.content} style={{flexDirection: props.direction}}>
                     {props.children}
                 </div>
             </div>

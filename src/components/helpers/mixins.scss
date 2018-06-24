@@ -1,0 +1,48 @@
+@mixin main-heading {
+    position: absolute;
+	padding: 0;
+	margin: 0;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	background-size: cover;
+	background-position-x: 4rem;
+	z-index: -999;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	&Header {
+		z-index: -998;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		h1, h2, p {
+			font-weight: 400;
+			margin: 2rem 0 2rem 0;
+			letter-spacing: .25rem;
+		}
+		h1 {
+			border-bottom: .3rem solid $accent-color;
+			font-size: 7rem;
+		}
+
+		h2 {
+			font-size: 5rem;
+		}
+
+		p {
+			font-size: 2.5rem;
+		}
+		//for large screens bigger words
+		@media screen and (min-width: 1800px) {
+			h1, h2, p {
+				margin:  3.5rem 0 3.5rem 0;
+			}
+			h1 {font-size: 10rem}
+			h2 {font-size: 7 rem}
+			p {font-size: 3rem}
+		}
+	}
+}
