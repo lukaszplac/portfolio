@@ -4,9 +4,10 @@ import styles from './StartContent.scss';
 
 const StartContent = (props) => {
 
-    let icons = props.iconSet.map((icon,i) => (
-        <img src={`../../../../res/img/icons/${icon}`} alt="web icon" key={i}></img>
-    ));
+    let icons = props.iconSet.map((icon,i) => {
+        let image = require(`../../../../res/img/icons/${icon}`);
+        return <img src={image} alt="web icon" key={i}></img>
+    });
     return(
         <AuxComp>
             <div className={styles.icons}>
