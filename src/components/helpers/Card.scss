@@ -16,14 +16,15 @@ $font-primary-style: 'Montserrat', sans-serif;
     padding: 0;
     animation: hoverMe 2s .4s infinite;
     .content {
-        flex: 0 0 85rem;
+        flex: 0 0 80rem;
         font-family: $font-primary-style;
         @media screen and (min-width: 1800px) {
-            flex: 0 0 120rem;
+            flex: 0 0 115rem;
         }
         h2 {
             font-weight: 500;
             border-bottom: 4px solid $accent-color;
+            text-align: center;
         }
         p {
             line-height: 150%;
