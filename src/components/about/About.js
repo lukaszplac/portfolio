@@ -12,15 +12,15 @@ class About extends Component {
 	};
 	
 	render() {
+		let direction = document.documentElement.clientWidth < 768 ? "column" : "row";
 		let colors = ["#ffa372", "#9fff72"];
-		let pics = [["me-about22.jpg"],
-					 ["me-rounded.png"]];
+		let pics = [["me-about22.jpg"], ["me-rounded.png"]];
 		let cardSet = contentJson.content.map((card,i) => <Card key={i} 
 																offset={(i+1)*10}
 																background={{color: colors[i]}}
 																zIndex={-100-(i*2)}
 																delay={""+0.2*(i+1)+"s"}
-																direction={"row"}>
+																direction={direction}>
 															<AboutContent
 																heading={card.heading}
 																text={card.text}

@@ -1,3 +1,5 @@
+@import '../../../variables';
+
 .icons {
     display: flex;
     justify-content: center;
@@ -7,10 +9,26 @@
         width: 11rem;
         max-height: auto;
         padding: 1.5rem;
-        //for large screens bigger icons
-		@media screen and (min-width: 1800px) {
-			width: 15rem;
-		}
+    }
+
+    @media screen and (max-width: $break-medium) {
+        width: 70vw;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        padding-left: 1rem;
+        img {
+            width: 4rem;
+            padding: .5rem;
+            &:first-child {
+                padding-left: 0;
+            }
+        }
+    }
+
+    @media screen and (min-width: 1800px) {
+        img {
+            width: 14rem;
+        }
     }
 }
 
