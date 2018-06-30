@@ -1,0 +1,47 @@
+@import '../../variables';
+
+.cardTip {
+    pointer-events: none;
+    position: absolute;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: anim1 .6s infinite;
+    &::after {
+        pointer-events: none;
+        content: '';
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        animation: anim2 .3s .3s infinite;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@keyframes anim1 {
+    0% {
+        border: 1px solid rgba(black, 1);
+        width: 5px;
+        height: 5px;
+    }
+
+    100% {
+        border: 5px solid rgba(black, 0);
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@keyframes anim2 {
+    0% {
+        border: 1px solid rgba($accent-color, 1);
+        width: 20px;
+        height: 20px;
+    }
+
+    100% {
+        border: 5px solid rgba($accent-color, 0);
+        width: 5px;
+        height: 5px;
+    }
+}

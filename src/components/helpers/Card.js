@@ -10,13 +10,22 @@ const Card = (props) => {
         zIndex: props.zIndex,
         animationDelay: props.delay,
     }
+    let classes=[styles.card];
+    if (props.show) classes.push(styles.show);
+    if (props.showFull) classes.push(styles.showFull);
+    if (props.someCardIsOpen && props.hidden) classes.push(styles.hidden);
     return(
         <AuxComp>
-            <div className={styles.hoverArea} style={{minHeight: `${offset}px`, zIndex: props.zIndex+1}}></div>
-            <div className={styles.card} style={inlineStyling}>
-                <div className={styles.content} style={{flexDirection: props.direction}}>
+            <div className={classes.join(' ')} 
+                 style={inlineStyling} 
+                 onMouseEnter={() => props.onEnter(props.id)}
+                 onMouseLeave={() => props.onLeave()}
+                 onClick={() => props.onClick(props.id)}
+                 onMouseOver={(e) => props.onMove(e)}>
+                 
+                 <div className={styles.content}>
                     {props.children}
-                </div>
+                 </div>
             </div>
         </AuxComp>
     );

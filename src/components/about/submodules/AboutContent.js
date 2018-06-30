@@ -1,10 +1,9 @@
 import React from 'react';
-import AuxComp from '../../helpers/AuxComp';
 import styles from './AboutContent.scss';
 
 const AboutContent = (props) => {
 
-    let pics = props.picsSet.map((icon,i) => {
+    let pics = props.iconSet.map((icon,i) => {
         let image = require(`../../../../res/img/${icon}`);
         return (<img src={image} alt="web picture" key={i}></img>);
     });
@@ -14,7 +13,7 @@ const AboutContent = (props) => {
         return (<p key={i} className={classes.join(' ')}>{par}</p>)
     });
     return(
-        <AuxComp>
+        <div className={styles.content}>
             <div className={styles.pics}>
                 {pics}
             </div>
@@ -22,7 +21,7 @@ const AboutContent = (props) => {
                 <h2>{props.heading}</h2>
                 {paragraphs}
             </div>
-        </AuxComp>
+        </div>
     );
 };
 

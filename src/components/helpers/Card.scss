@@ -11,91 +11,38 @@ $font-primary-style: 'Montserrat', sans-serif;
     display: flex;
     justify-content: center;
     border-radius: 1rem;
-    transition: all .5s;
+    transition: all .3s;
     padding: 0;
     animation: hoverMe 2s .4s infinite;
     .content {
-        flex: 0 0 60vw;
-        font-family: $font-primary-style;
-        @media screen and (min-width: 1800px) {
-            flex: 0 0 115rem;
-        }
-        h2 {
-            font-weight: 500;
-            border-bottom: 4px solid $accent-color;
-            text-align: center;
-        }
-        p {
-            line-height: 150%;
-            letter-spacing: .02rem;
-            transition: all .3s;
-            font-weight: 400;
-            &::first-letter {
-                position: absolute;
-                font-weight: 500;
-                font-size: 2.5rem;
-                color: $accent-color;
-            }
-        }
-        display: flex;
-        //flex-direction: column; passed inline
-        justify-content: center;
-        align-content: center;
-        align-items: center;
-        position: relative;
         left: -50rem;
         opacity: 0;
-        transition: all .25s .2s;
-        @media screen and (min-width: 1800px) {
-			h2 {
-                font-size: 6rem;
-            }
-            p {
-                font-size: 2.2rem;
-            }
-        }
-        @media screen and (max-width: $break-medium) {
-            width: 70vw;
-            padding-left: 1rem;
-			h2 {
-                font-size: 3rem;
-                align-self: flex-start;
-            }
-            p {
-                font-size: 1.1rem;
-                width: 60vw;
-                line-height: 135%;
-                text-align: left;
-                align-self: flex-start;
-                margin: .5rem 0 .5rem 0;
-                &::first-letter {
-                    font-size: 1.8rem;
-                }
-            }
-		}
-     }
+        transition: all .4s ease-out;
+        display: flex;
+        justify-content: center;
+    }
+    &:hover {
+        cursor: pointer;
+    }
 }
 
-.hoverArea {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 15vw;
-    &:hover {
-        width: 90vw;
-        height: 100vh;
-        opacity: 0;
-    }
-    &:hover + .card {
-        width: 90vw;
-        height: 100vh;
-        animation: none;
-        .content {
-            left: 0;
-            opacity: 1;
-        }
+.show {
+    width: 20vw;
+}
+
+.showFull {
+    width: 99vw;
+    animation: none;
+    .content {
+        left: 0;
+        opacity: 1;
     }
 }
+
+.hidden {
+    width: 0vw;
+}
+
 
 @keyframes hoverMe {
     25% {

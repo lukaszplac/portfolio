@@ -4,6 +4,7 @@ import contentJson from './content.json';
 import styles from './About.scss';
 import AboutContent from './submodules/AboutContent';
 import Header from '../helpers/Header';
+import CardWrapper from '../helpers/CardWrapper';
 
 class About extends Component {
 
@@ -12,24 +13,14 @@ class About extends Component {
 	};
 	
 	render() {
-		let direction = document.documentElement.clientWidth < 768 ? "column" : "row";
 		let colors = ["#ffa372", "#9fff72"];
 		let pics = [["me-about22.jpg"], ["me-rounded.png"]];
-		let cardSet = contentJson.content.map((card,i) => <Card key={i} 
-																offset={(i+1)*10}
-																background={{color: colors[i]}}
-																zIndex={-100-(i*2)}
-																delay={""+0.2*(i+1)+"s"}
-																direction={direction}>
-															<AboutContent
-																heading={card.heading}
-																text={card.text}
-																fontChangable={card.fontChangable ? true : false}
-																picsSet={pics[i]}/>
-														  </Card>)
 		return(
 			<div className={styles.about}>
-				{cardSet}
+				<CardWrapper colors={colors} 
+							 icons={pics} 
+						     contentJson={contentJson}
+							 elementContent={AboutContent}/>
 				<div className={styles.aboutHeader}>
 								<Header welcome="You think you know me?"
 										headerMain="Well, you don`t"

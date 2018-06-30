@@ -1,42 +1,88 @@
 @import '../../../variables';
 
-.icons {
+.content {
+    flex: 0 0 80vw;
+    font-family: $font-primary-style;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-content: center;
     align-items: center;
-    img {
-        flex: 0 1 auto;
-        width: 11rem;
-        max-height: auto;
-        padding: 1.5rem;
+    position: relative;
+    h2 {
+        font-weight: 500;
+        border-bottom: 4px solid $accent-color;
+        text-align: center;
+        font-size: 4rem;
     }
-
+    p {
+        line-height: 150%;
+        letter-spacing: .02rem;
+        transition: all .3s;
+        font-weight: 400;
+        text-align: center;
+        font-size: 2rem;
+        &::first-letter {
+            position: absolute;
+            font-weight: 500;
+            font-size: 2.5rem;
+            color: $accent-color;
+        }
+    }
+    @media screen and (min-width: 1800px) {
+        p {
+            min-width: 50vw;
+            max-width: 65vw;
+        }
+    }
+    @media screen and (min-width: 1800px) {
+        h2 {
+            font-size: 6rem;
+        }
+        p {
+            font-size: 2.2rem;
+        }
+    }
     @media screen and (max-width: $break-medium) {
-        width: 70vw;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        padding-left: 1rem;
-        img {
-            width: 4rem;
-            padding: .5rem;
-            &:first-child {
-                padding-left: 0;
+        h2 {
+            font-size: 2.8rem;
+        }
+        p {
+            font-size: 1.5rem;
+            width: 70vw;
+            line-height: 135%;
+            text-align: left;
+            margin: .5rem 0 .5rem 0;
+            &::first-letter {
+                font-size: 1.8rem;
             }
         }
     }
-
-    @media screen and (min-width: 1800px) {
+    .icons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        width: 70vw;
         img {
-            width: 14rem;
+            flex: 0 1 auto;
+            width: 11rem;
+            max-height: auto;
+            padding: 1.5rem;
+        }
+
+        @media screen and (max-width: $break-medium) {
+            flex-wrap: wrap;
+            img {
+                width: 2.8rem;
+                text-align: center;
+            }
+        }
+
+        @media screen and (min-width: 1800px) {
+            img {
+                width: 14rem;
+            }
         }
     }
-}
-
-h2 {
-    font-size: 4rem;
-}
-
-p {
-    text-align: center;
-    font-size: 2rem;
 }
